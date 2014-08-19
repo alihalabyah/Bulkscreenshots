@@ -1,0 +1,63 @@
+extends layout
+
+block content
+  .container
+    // Top Navigation
+    .codrops-top.clearfix
+      //- a.codrops-icon.codrops-icon-prev(href="http://tympanus.net/Development/SelectInspiration/")
+      //-   span Previous Demo
+      //- a.codrops-icon.codrops-icon-drop(href="http://tympanus.net/codrops/?p=19415")
+      //-   span Back to the Codrops Article
+    header.codrops-header
+      h1
+        | Bulk Screenshots
+        span Simple way to take Screenshots by pasting bulk of links.
+    .main.clearfix
+      .column
+        p.small Paste your links line separated in the right textarea then click "Take screenshots!"
+        button#notification-trigger.progress-button(ng-click="add($event)")
+          span.content Take screenshots!
+          span.progress
+      .column
+        nav.codrops-demos
+          //- h3 Growl-like
+          textarea#links
+    // Related demos
+    //- section.related
+    //-   p If you enjoyed this demo you might also like:
+    //-   a(href="http://tympanus.net/Development/ProgressButtonStyles/")
+    //-     img(src="http://tympanus.net/codrops/wp-content/uploads/2013/12/ProgressButtonStyles-300x162.png")
+    //-     h3 Progress Button Styles
+    //-   a(href="http://tympanus.net/Development/CreativeLoadingEffects/")
+    //-     img(src="http://tympanus.net/codrops/wp-content/uploads/2013/09/CreativeLoadingEffects-300x162.png")
+    //-     h3 Creative Loading Effects
+  // /container
+  script(src="js/classie.js")
+  script(src="js/notificationFx.js")
+  // script.
+  //   (function() {
+  //   var bttn = document.getElementById( 'notification-trigger' );
+  //   // make sure..
+  //   bttn.disabled = false;
+  //   bttn.addEventListener( 'click', function() {
+  //   // simulate loading (for demo purposes only)
+  //   classie.add( bttn, 'active' );
+  //   setTimeout( function() {
+  //   classie.remove( bttn, 'active' );
+  //   // create the notification
+  //   var notification = new NotificationFx({
+  //   message : '<span class="icon icon-megaphone"></span><p>You have some interesting news in your inbox. Go <a href="#">check it out</a> now.</p>',
+  //   layout : 'bar',
+  //   effect : 'slidetop',
+  //   type : 'notice', // notice, warning or error
+  //   onClose : function() {
+  //   bttn.disabled = false;
+  //   }
+  //   });
+  //   // show the notification
+  //   notification.show();
+  //   }, 1200 );
+  //   // disable the button (for demo purposes only)
+  //   this.disabled = true;
+  //   } );
+  //   })();
